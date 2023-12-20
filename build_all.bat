@@ -11,3 +11,11 @@ for %%d in (%targetdir%\%targetprefix%*) do (
         popd
     popd
 )
+
+echo === 2nd ===
+pushd Sample_01
+    mkdir build
+    pushd build
+        cmake ../
+    popd
+popd
