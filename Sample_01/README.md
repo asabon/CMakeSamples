@@ -2,13 +2,12 @@
 
 ## Overview
 
-- 1つのファイルをCMakeでビルドして「実行ファイル(.exe)」を作る
+- 1つのソースファイルから実行ファイル(.exe)を作る。
 
-## ファイル構成
+## File structure
 
 ```text
 + C_01/
   + CMakeLists.txt
   + main.c
 ```
-
