@@ -2,15 +2,15 @@
 
 set targetdir=.
 set targetprefix=Sample_
-for %%d in (%targetdir%\%targetprefix%*) do (
+for %%d in (%targetdir%) do (
     echo === %%d ===
-    pushd %%d
-        mkdir build
-        pushd build
-            cmake ../
-            msbuild %%d.sln
-        popd
-    popd
+rem    pushd %%d
+rem        mkdir build
+rem        pushd build
+rem            cmake ../
+rem            msbuild %%d.sln
+rem        popd
+rem    popd
 )
 
 echo === 2nd ===
