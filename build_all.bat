@@ -2,7 +2,7 @@
 
 set targetdir=.
 set targetprefix=Sample_
-for %%d in (%targetdir%) do (
+for %%d in (%targetprefix%*) do (
     echo === %%d ===
 rem    pushd %%d
 rem        mkdir build
