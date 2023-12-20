@@ -6,6 +6,7 @@ pushd %~dp0
     for /d %%d in (%targetprefix%*) do (
         echo === %%d ===
         pushd %%d
+            rmdir /s /q build
             mkdir build
             pushd build
                 cmake ..
