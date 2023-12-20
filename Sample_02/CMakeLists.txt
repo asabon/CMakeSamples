@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10 FATAL_ERROR)
-project(C_01)
+project(Sample_02)
 
 set(TARGET_EXE out.exe)
 

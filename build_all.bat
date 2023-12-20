@@ -17,5 +17,6 @@ pushd Sample_01
     mkdir build
     pushd build
         cmake ../
+        msbuild Sample_01.sln
     popd
 popd
