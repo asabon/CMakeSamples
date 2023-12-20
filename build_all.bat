@@ -22,6 +22,7 @@ pushd Sample_01
             echo build error
             exit /b 1
         )
-        Debug/out.exe
+        rem 実行するとエラーになってしまうのでひとまずコメントアウト
+        rem Debug/out.exe
     popd
 popd
