@@ -18,5 +18,10 @@ pushd Sample_01
     pushd build
         cmake ../
         msbuild Sample_01.sln
+        if not exists Debug/out.exe (
+            echo build error
+            exit /b 1
+        )
+        Debug/out.exe
     popd
 popd

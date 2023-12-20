@@ -11,8 +11,8 @@ do
             pushd build
                 cmake ..
                 make
-                if [ -e ./out.exe ]; then
-                    ./out.exe
+                if [ -e ./out ]; then
+                    ./out
                     echo "[OK] $dir"
                 else
                     echo "[NG] $dir"
