@@ -14,7 +14,7 @@ pushd %~dp0
                     echo build error
                     exit /b 1
                 )
-                Debug/out.exe
+                call "Debug\out.exe"
             popd
         popd
     )
