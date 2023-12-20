@@ -1,5 +1,6 @@
 @echo off
 
+echo "Start"
 pushd %~dp0
     set targetprefix=Sample_
     for /d %%d in (%targetprefix%*) do (
@@ -19,3 +20,4 @@ pushd %~dp0
         popd
     )
 popd
+echo "End"
