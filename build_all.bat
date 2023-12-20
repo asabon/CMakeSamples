@@ -8,9 +8,9 @@ pushd %~dp0
         pushd %%d
             mkdir build
             pushd build
-                cmake ../
+                cmake ..
                 msbuild %%d.sln
-                if not exists Debug/out.exe (
+                if not exists Debug\out.exe (
                     echo build error
                     exit /b 1
                 )
