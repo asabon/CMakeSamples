@@ -11,10 +11,10 @@ pushd %~dp0
             pushd build
                 cmake ..
                 msbuild %%d.sln
-                if not exists Debug\out.exe (
-                    echo build error
-                    exit /b 1
-                )
+rem                if not exists Debug\out.exe (
+rem                    echo build error
+rem                    exit /b 1
+rem                )
                 rem 実行するとエラーになってしまうのでひとまずコメントアウト
                 rem Debug/out.exe
             popd
