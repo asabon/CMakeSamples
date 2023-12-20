@@ -2,9 +2,10 @@ name: CI
 
 on:
   push:
+  workflow_dispatch:
 
 jobs:
-  build:
+  build-linux:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -13,3 +14,29 @@ jobs:
       - name: Build and Execute
         run: |
           ./build_all.sh
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifact-linux
+          path: Sample_*/build
+
+  build-windows:
+    runs-on: windows-2019
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1.3.1
+
+      - name: Build and Execute
+        run: |
+          ./build_all.bat
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: artifact-windows
+          path: Sample_*/build
+  
