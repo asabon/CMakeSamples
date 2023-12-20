@@ -11,10 +11,14 @@ pushd %~dp0
                 cmake ..
                 msbuild %%d.sln
                 if not exist "Debug\out.exe" (
-                    echo build error
+                    echo "[ERROR] build error.
                     exit /b 1
                 )
                 call "Debug\out.exe"
+                if %errorlevel% neq 0 (
+                    echo "[ERROR] errorlevel = %errorlevel%"
+                    exit /b 1
+                )
             popd
         popd
     )
