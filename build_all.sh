@@ -16,6 +16,7 @@ do
                     echo "[OK] $dir"
                 else
                     echo "[NG] $dir"
+                    exit 1;
                 fi
             popd
         fi
