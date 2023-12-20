@@ -8,6 +8,7 @@ for %%d in (%targetdir%\%targetprefix%*) do (
         mkdir build
         pushd build
             cmake ../
+            msbuild %%d.sln
         popd
     popd
 )
