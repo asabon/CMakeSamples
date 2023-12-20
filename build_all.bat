@@ -1,6 +1,5 @@
 @echo off
 
-echo "Start"
 pushd %~dp0
     set targetprefix=Sample_
     for /d %%d in (%targetprefix%*) do (
@@ -15,10 +14,8 @@ pushd %~dp0
                     echo build error
                     exit /b 1
                 )
-                rem 実行するとエラーになってしまうのでひとまずコメントアウト
-                rem Debug/out.exe
+                Debug/out.exe
             popd
         popd
     )
 popd
-echo "End"
