@@ -7,7 +7,7 @@
 ## File structure
 
 ```text
-+ C_01/
++ Sample_01/
   + CMakeLists.txt
   + main.c
 ```
